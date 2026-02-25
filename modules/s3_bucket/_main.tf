@@ -1,6 +1,8 @@
-resource "aws_s3_bucket" "this" {
-  bucket = var.bucket_name
-  acl    = var.acl
-
-  tags = var.tags
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = ">3.0.0"
+    }
+  }
 }
